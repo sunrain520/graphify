@@ -2,9 +2,8 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![CI](https://github.com/safishamsi/graphify/actions/workflows/ci.yml/badge.svg?branch=v3)](https://github.com/safishamsi/graphify/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/graphifyy)](https://pypi.org/project/graphifyy/)
-[![Sponsor](https://img.shields.io/badge/sponsor-safishamsi-ea4aaa?logo=github-sponsors)](https://github.com/sponsors/safishamsi)
+[![CI](https://github.com/sunrain520/graphify/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sunrain520/graphify/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/graphify-leo)](https://pypi.org/project/graphify-leo/)
 
 **An AI coding assistant skill.** Type `/graphify` in Claude Code, Codex, OpenCode, OpenClaw, or Factory Droid - it reads your files, builds a knowledge graph, and gives you back structure you didn't know was there. Understand a codebase faster. Find the "why" behind architectural decisions.
 
@@ -49,10 +48,10 @@ Every relationship is tagged `EXTRACTED` (found directly in source), `INFERRED` 
 **Requires:** Python 3.10+ and one of: [Claude Code](https://claude.ai/code), [Codex](https://openai.com/codex), [OpenCode](https://opencode.ai), [OpenClaw](https://openclaw.ai), or [Factory Droid](https://factory.ai)
 
 ```bash
-pip install graphifyy && graphify install
+pip install graphify-leo && graphify install
 ```
 
-> The PyPI package is temporarily named `graphifyy` while the `graphify` name is being reclaimed. The CLI and skill command are still `graphify`.
+> This fork publishes to PyPI as `graphify-leo`. The import package and CLI command remain `graphify`, which keeps local usage and upstream merges straightforward.
 
 ### Platform support
 
@@ -106,7 +105,7 @@ Think of it this way: the always-on hook gives your assistant a map. The `/graph
 
 ```bash
 mkdir -p ~/.claude/skills/graphify
-curl -fsSL https://raw.githubusercontent.com/safishamsi/graphify/v3/graphify/skill.md \
+curl -fsSL https://raw.githubusercontent.com/sunrain520/graphify/main/graphify/skill.md \
   > ~/.claude/skills/graphify/SKILL.md
 ```
 
@@ -176,7 +175,7 @@ Works with any mix of file types:
 |------|-----------|------------|
 | Code | `.py .ts .js .go .rs .java .c .cpp .rb .cs .kt .scala .php .swift .lua .zig .ps1 .ex .exs .m .mm` | AST via tree-sitter + call-graph + docstring/comment rationale |
 | Docs | `.md .txt .rst` | Concepts + relationships + design rationale via Claude |
-| Office | `.docx .xlsx` | Converted to markdown then extracted via Claude (requires `pip install graphifyy[office]`) |
+| Office | `.docx .xlsx` | Converted to markdown then extracted via Claude (requires `pip install graphify-leo[office]`) |
 | Papers | `.pdf` | Citation mining + concept extraction |
 | Images | `.png .jpg .webp .gif` | Claude vision - screenshots, diagrams, any language |
 
@@ -224,7 +223,7 @@ NetworkX + Leiden (graspologic) + tree-sitter + vis.js. Semantic extraction via 
 
 ## Star history
 
-[![Star History Chart](https://api.star-history.com/svg?repos=safishamsi/graphify&type=Date)](https://star-history.com/#safishamsi/graphify&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=sunrain520/graphify&type=Date)](https://star-history.com/#sunrain520/graphify&Date)
 
 <details>
 <summary>Contributing</summary>

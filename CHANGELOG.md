@@ -1,6 +1,12 @@
 # Changelog
 
-Full release notes with details on each version: [GitHub Releases](https://github.com/safishamsi/graphify/releases)
+Full release notes with details on each version: [GitHub Releases](https://github.com/sunrain520/graphify/releases)
+
+## 0.3.11.post1 (2026-04-08)
+
+- Release: publish this fork to PyPI as `graphify-leo` while keeping the import package and CLI command as `graphify`
+- Docs: switch repository, badge, raw skill install, and package-install references to `sunrain520/graphify`
+- Packaging: update project URLs and metadata for independent fork distribution while preserving upstream-friendly code layout
 
 ## 0.3.11 (2026-04-07)
 
@@ -88,7 +94,7 @@ Full release notes with details on each version: [GitHub Releases](https://githu
 - Token reduction benchmark auto-runs after every pipeline on corpora over 5,000 words
 - Fix: 292 edge warnings per run eliminated - stdlib/external edges now silently skipped
 - Fix: `build()` cross-extraction edges were silently dropped - now merged before assembly
-- Fix: `pip install graphify` → `pip install graphifyy` in skill Step 1 (critical install bug)
+- Fix: `pip install graphify` → `pip install graphify-leo` in skill Step 1 (critical install bug)
 - Add: `--graphml` flag implemented in skill pipeline (was documented but not wired up)
 - Remove: pyvis dependency, dead lib/ folder, misplaced eval reports from tests/
 - Add: 5 HTML renderer tests (223 total)

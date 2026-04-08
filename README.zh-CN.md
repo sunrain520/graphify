@@ -2,8 +2,8 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![CI](https://github.com/safishamsi/graphify/actions/workflows/ci.yml/badge.svg?branch=v3)](https://github.com/safishamsi/graphify/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/graphifyy)](https://pypi.org/project/graphifyy/)
+[![CI](https://github.com/sunrain520/graphify/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sunrain520/graphify/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/graphify-leo)](https://pypi.org/project/graphify-leo/)
 
 **一个面向 AI 编码助手的技能。** 在 Claude Code、Codex、OpenCode 或 OpenClaw 中输入 `/graphify`，它会读取你的文件、构建知识图谱，并把原本不明显的结构关系还给你。更快理解代码库，找到架构决策背后的“为什么”。
 
@@ -36,10 +36,10 @@ graphify 分两轮执行。第一轮是确定性的 AST 提取，对代码文件
 **要求：** Python 3.10+，并且使用以下平台之一：[Claude Code](https://claude.ai/code)、[Codex](https://openai.com/codex)、[OpenCode](https://opencode.ai) 或 [OpenClaw](https://openclaw.ai)
 
 ```bash
-pip install graphifyy && graphify install
+pip install graphify-leo && graphify install
 ```
 
-> PyPI 包当前暂时叫 `graphifyy`，因为 `graphify` 这个名字还在回收中。CLI 命令和 skill 命令仍然都是 `graphify`。
+> 这个 fork 在 PyPI 上发布为 `graphify-leo`。导入包名和 CLI 命令仍然保持 `graphify`，这样既方便日常使用，也更利于后续跟随上游合并。
 
 ### 平台支持
 
@@ -92,7 +92,7 @@ Codex 用户还需要在 `~/.codex/config.toml` 的 `[features]` 下打开 `mult
 
 ```bash
 mkdir -p ~/.claude/skills/graphify
-curl -fsSL https://raw.githubusercontent.com/safishamsi/graphify/v3/graphify/skill.md \
+curl -fsSL https://raw.githubusercontent.com/sunrain520/graphify/main/graphify/skill.md \
   > ~/.claude/skills/graphify/SKILL.md
 ```
 

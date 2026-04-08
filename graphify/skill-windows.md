@@ -60,7 +60,7 @@ Follow these steps in order. Do not skip steps.
 ```powershell
 # Detect Python and install graphify if needed
 python -c "import graphify" 2>$null
-if ($LASTEXITCODE -ne 0) { pip install graphifyy -q 2>&1 | Select-Object -Last 3 }
+if ($LASTEXITCODE -ne 0) { pip install graphify-leo -q 2>&1 | Select-Object -Last 3 }
 # Write interpreter path for all subsequent steps
 python -c "import sys; open('.graphify_python', 'w').write(sys.executable)"
 ```
